@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homeassignment_fx.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <children>
+        <TabPane prefHeight="888.0" prefWidth="913.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Patients">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="597.0" prefWidth="889.0">
+                        <children>
+                            <Button fx:id="addPatientButton" layoutX="7.0" layoutY="16.0" mnemonicParsing="false" onAction="#addPatientButtonAction" prefHeight="25.0" prefWidth="119.0" text="Add a new patient" />
+                            <Button layoutX="7.0" layoutY="218.0" mnemonicParsing="false" onAction="#restartPatients" text="Restart" />
+                            <Label layoutX="379.0" layoutY="20.0" text="ID" />
+                            <TextField fx:id="patientIDText" layoutX="432.0" layoutY="16.0" />
+                            <Label layoutX="374.0" layoutY="54.0" prefHeight="17.0" prefWidth="34.0" text="Name" />
+                            <TextField fx:id="patientNameText" layoutX="432.0" layoutY="50.0" />
+                            <Label layoutX="365.0" layoutY="88.0" text="Phone no" />
+                            <TextField fx:id="patientPhNumberText" layoutX="432.0" layoutY="84.0" />
+                            <Label layoutX="369.0" layoutY="122.0" text="Problem" />
+                            <TextField fx:id="patientPrbDescriptionText" layoutX="432.0" layoutY="118.0" />
+                            <Label layoutX="380.0" layoutY="156.0" text="Age" />
+                            <TextField fx:id="patientAgeText" layoutX="432.0" layoutY="152.0" />
+                            <Button fx:id="listOfPatients" layoutX="414.0" layoutY="218.0" mnemonicParsing="false" onAction="#displayPatientsButtonAction" text="Display the current patients" />
+                            <TextArea fx:id="displayPatients" layoutX="349.0" layoutY="266.0" prefHeight="290.0" prefWidth="291.0" />
+                        <Button layoutX="7.0" layoutY="50.0" mnemonicParsing="false" onAction="#deletePatientButtonAction" prefHeight="25.0" prefWidth="120.0" text="Delete a patient" textAlignment="CENTER" />
+                        <TextField fx:id="deletePatientIDText" layoutX="236.0" layoutY="50.0" prefHeight="25.0" prefWidth="46.0" />
+                        <Label layoutX="126.0" layoutY="54.0" text="-&gt; enter patient's ID" />
+                        <Label layoutX="127.0" layoutY="20.0" text="-&gt; fill the patient's properties" />
+                        <Label layoutX="126.0" layoutY="88.0" text="-&gt; enter patient's ID" />
+                        <Button layoutX="7.0" layoutY="84.0" mnemonicParsing="false" onAction="#updatePatientButtonAction" prefHeight="25.0" prefWidth="119.0" text="Update a patient" />
+                        <Button layoutX="7.0" layoutY="118.0" mnemonicParsing="false" onAction="#findPatientByIDButtonAction" text="Find a patient by ID" />
+                        <Button layoutX="7.0" layoutY="152.0" mnemonicParsing="false" onAction="#getNameOfPatientsWithGivenProblemButtonAction" text="Patients with a given problem" />
+                        <Button layoutX="7.0" layoutY="185.0" mnemonicParsing="false" onAction="#getNumberofMinorPatientsButtonAction" text="Number of registered minor patients" />
+                        <Label layoutX="126.0" layoutY="122.0" text="-&gt; enter patient's ID" />
+                        <Label layoutX="180.0" layoutY="156.0" text="-&gt;" />
+                        <TextField fx:id="findPatientIDText" layoutX="237.0" layoutY="118.0" prefHeight="25.0" prefWidth="43.0" />
+                        <TextField fx:id="givenProblemText" layoutX="195.0" layoutY="152.0" prefHeight="25.0" prefWidth="87.0" />
+                        <TextArea fx:id="outputPText" layoutX="7.0" layoutY="266.0" prefHeight="288.0" prefWidth="268.0" />
+                        <TextField fx:id="updatePIDText" layoutX="237.0" layoutY="84.0" prefHeight="25.0" prefWidth="44.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Appointments">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Button fx:id="addAppointmentBUtton" layoutX="11.0" layoutY="16.0" mnemonicParsing="false" onAction="#addAppointmentButtonAction" text="Add a new appointment" />
+                            <Button layoutX="11.0" layoutY="249.0" mnemonicParsing="false" onAction="#restartAppointments" text="Restart" />
+                            <Label layoutX="497.0" layoutY="20.0" text="ID" />
+                            <TextField fx:id="appIDText" layoutX="545.0" layoutY="16.0" />
+                            <Label layoutX="477.0" layoutY="54.0" text="Patient ID" />
+                            <TextField fx:id="appPatientIDText" layoutX="545.0" layoutY="50.0" />
+                            <Label layoutX="490.0" layoutY="88.0" text="Date" />
+                            <TextField fx:id="appDateText" layoutX="545.0" layoutY="84.0" />
+                            <Label layoutX="490.0" layoutY="122.0" text="Price" />
+                            <TextField fx:id="appPriceText" layoutX="545.0" layoutY="118.0" />
+                            <Button fx:id="listOfAppointments" layoutX="491.0" layoutY="249.0" mnemonicParsing="false" onAction="#displayAppointmentsButtonAction" text="Display the current appointments" />
+                            <TextArea fx:id="displayApps" layoutX="402.0" layoutY="284.0" prefHeight="290.0" prefWidth="313.0" />
+                        <Button layoutX="11.0" layoutY="50.0" mnemonicParsing="false" onAction="#deleteAppointmentButtonAction" prefHeight="25.0" prefWidth="145.0" text="Delete an appointment" />
+                        <Button layoutX="11.0" layoutY="84.0" mnemonicParsing="false" onAction="#updateAppointmentButtonAction" prefHeight="25.0" prefWidth="145.0" text="Update an appointment" />
+                        <Button layoutX="11.0" layoutY="118.0" mnemonicParsing="false" onAction="#findAppointmentByIDButtonAction" text="Find an appointment by ID " />
+                        <Button layoutX="11.0" layoutY="150.0" mnemonicParsing="false" onAction="#getAppointmentsOfGivenPatientName" text="Appointments of a certain patient" />
+                        <Button layoutX="11.0" layoutY="214.0" mnemonicParsing="false" onAction="#getPatientsWithAppointmentsOnAGivenMonthButtonAction" text="Patients with appointments on a given month" />
+                        <Button layoutX="11.0" layoutY="182.0" mnemonicParsing="false" onAction="#getAppointmentsGreaterThanGivenPriceButtonAction" text="Appointments greater than a given price" />
+                        <Label layoutX="156.0" layoutY="20.0" text="-&gt; fill the appointment properties" />
+                        <Label layoutX="156.0" layoutY="54.0" text="-&gt; enter the ID" />
+                        <Label layoutX="156.0" layoutY="88.0" text="-&gt; enter the ID" />
+                        <Label layoutX="172.0" layoutY="122.0" text="-&gt; enter the ID" />
+                        <Label layoutX="206.0" layoutY="154.0" text="-&gt; enter patient's name" />
+                        <Label layoutX="245.0" layoutY="186.0" text="-&gt; enter the price" />
+                        <Label layoutX="269.0" layoutY="218.0" text="-&gt; enter the month" />
+                        <TextField fx:id="deleteAppIDText" layoutX="242.0" layoutY="50.0" prefHeight="25.0" prefWidth="35.0" />
+                        <TextField fx:id="updateAppIDText" layoutX="242.0" layoutY="84.0" prefHeight="25.0" prefWidth="36.0" />
+                        <TextField fx:id="findAppIDText" layoutX="257.0" layoutY="118.0" prefHeight="25.0" prefWidth="37.0" />
+                        <TextField fx:id="givenPatientNameText" layoutX="335.0" layoutY="150.0" prefHeight="25.0" prefWidth="117.0" />
+                        <TextField fx:id="givenPriceText" layoutX="347.0" layoutY="182.0" prefHeight="25.0" prefWidth="45.0" />
+                        <TextField fx:id="givenMonthText" layoutX="378.0" layoutY="214.0" prefHeight="25.0" prefWidth="48.0" />
+                        <TextArea fx:id="outputAText" layoutX="11.0" layoutY="284.0" prefHeight="288.0" prefWidth="289.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+        </TabPane>
+    </children>
+</VBox>
